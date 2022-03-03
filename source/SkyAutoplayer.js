@@ -29,7 +29,7 @@
 
 const user_agreements = 
 	"请仔细阅读以下使用须知！\n\n" + 
-	"1. 未充分测试，若遇到BUG，请酷安私信@StageGuard或新建Issue来反馈BUG！\n\n" + 
+	"这是一个测试？1. 未充分测试，若遇到BUG，请酷安私信@StageGuard或新建Issue来反馈BUG！\n\n" + 
 	"2. SkyAutoplayerScript是完全免费且开源的软件/脚本(https://github.com/StageGuard/SkyAutoPlayerScript)，使用 SkyAutoplayerScript 盈利的同时请标注源项目链接。\n\n" + 
 	"3. 共享乐谱不遵守LGPL-2.1协议，如您想在SkyAutoPlayer以外使用这些乐谱，请自行找乐谱作者授权！\n\n" + 
 	"4. 本脚本仅可用作娱乐用途，请不要在正规场合使用本脚本(请自行体会\"正规场合\"是什么意思)，若因使用本脚本所出现了一些不友好的问题，与脚本作者StageGuard无关。\n\n" + 
@@ -634,7 +634,7 @@ config = {
 	},
 	
 	checkVersion: function() {
-		this.values.gitVersion = http.get("http://81.70.194.140:8090/StageGuard/SkyAutoPlayerScript/raw/branch/master/gitVersion").body.string();
+		this.values.gitVersion = http.get("http://81.70.194.140:8090/gyxm/SkyAutoPlayerScript/raw/branch/master/gitVersion").body.string();
 		var periodVersion = this._global_storage.get("version", this.values.currentVersion);
 		var currentVersion = this.values.currentVersion;
 		if(periodVersion < currentVersion) {
@@ -718,11 +718,11 @@ config = {
 
 	fetchRepoFile: function(path, successCbk, failCbk) {
 		var repos = [
-			"http://81.70.194.140:8090/StageGuard/SkyAutoPlayerScript/raw/branch/master/" + path,
-			"https://cdn.jsdelivr.net/gh/StageGuard/SkyAutoPlayerScript@" + config.values.gitVersion + "/" + path,
-			"https://dl.skyautoplayerscript.stageguard.top/" + path,
-			"https://gitee.com/stageguard/SkyAutoPlayerScript/raw/master/" + path,
-			"https://raw.githubusercontent.com/StageGuard/SkyAutoPlayerScript/master/" + path
+			"http://81.70.194.140:8090/gyxm/SkyAutoPlayerScript/raw/branch/master/" + path,
+			"https://cdn.jsdelivr.net/gh/gyxm/SkyAutoPlayerScript@" + config.values.gitVersion + "/" + path,
+			"https://dl.skyautoplayerscript.gyxm.top/" + path,
+			"https://gitee.com/gyxm/SkyAutoPlayerScript/raw/master/" + path,
+			"https://raw.githubusercontent.com/gyxm/SkyAutoPlayerScript/master/" + path
 		];
 		var errorCollector = new String();
 		for(var i in repos) {
@@ -3317,7 +3317,7 @@ gui.dialogs.showProgressDialog(function(o) {
 											if(id == 0) {
 												if(!app.launch("com.coolapk.market")) toast(config.languages[config.values.lang].page_sc_upload_ca_not_exist);
 											} else if(id == 1) {
-												app.openUrl("https://github.com/StageGuard/SkyAutoplayerScript/");
+												app.openUrl("https://github.com/gyxm/SkyAutoplayerScript/");
 											}
 										},
 									});
