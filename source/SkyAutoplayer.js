@@ -634,7 +634,7 @@ config = {
 	},
 	
 	checkVersion: function() {
-		this.values.gitVersion = http.get("http://81.70.194.140:8090/gyxm/SkyAutoPlayerScript/raw/branch/master/gitVersion").body.string();
+		this.values.gitVersion = http.get("https://raw.githubusercontent.com/gyxm/xmmusic/master/gitVersion").body.string();
 		var periodVersion = this._global_storage.get("version", this.values.currentVersion);
 		var currentVersion = this.values.currentVersion;
 		if(periodVersion < currentVersion) {
@@ -718,11 +718,7 @@ config = {
 
 	fetchRepoFile: function(path, successCbk, failCbk) {
 		var repos = [
-			"http://81.70.194.140:8090/gyxm/SkyAutoPlayerScript/raw/branch/master/" + path,
-			"https://cdn.jsdelivr.net/gh/gyxm/SkyAutoPlayerScript@" + config.values.gitVersion + "/" + path,
-			"https://dl.skyautoplayerscript.gyxm.top/" + path,
-			"https://gitee.com/gyxm/SkyAutoPlayerScript/raw/master/" + path,
-			"https://raw.githubusercontent.com/gyxm/SkyAutoPlayerScript/master/" + path
+			"https://raw.githubusercontent.com/gyxm/xmmusic/master/" + path
 		];
 		var errorCollector = new String();
 		for(var i in repos) {
@@ -3317,7 +3313,7 @@ gui.dialogs.showProgressDialog(function(o) {
 											if(id == 0) {
 												if(!app.launch("com.coolapk.market")) toast(config.languages[config.values.lang].page_sc_upload_ca_not_exist);
 											} else if(id == 1) {
-												app.openUrl("https://github.com/gyxm/SkyAutoplayerScript/");
+												app.openUrl("https://github.com/gyxm/xmmusic");
 											}
 										},
 									});
