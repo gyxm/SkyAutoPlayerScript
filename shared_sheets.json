@@ -18,6 +18,26 @@
       ]
     },
     {
+  "sheets": [
+    {
+      "name": "G大调莫扎特奏鸣曲K283",
+      "file": "G大调莫扎特奏鸣曲K283.txt",
+      "author": "小喵音游大师",
+      "desc": "<a href=mailto:666@qq.com>@小喵音游大师<a/> 分享乐谱 小喵音游大师",
+      "bpm": 500,
+      "suggested_instrument": 1,
+      "keyCount": 15,
+      "pitchLevel": 0,
+      "noteCount": 267,
+      "social": [
+        {
+          "platform": "mail",
+          "name": "666@qq.com",
+          "link": "666@qq.com"
+        }
+      ]
+    },
+    {
       "name": "多情种",
       "file": "多情种.txt",
       "author": "酷安@Leotoast",
